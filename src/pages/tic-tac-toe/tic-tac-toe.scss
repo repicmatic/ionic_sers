@@ -1,0 +1,31 @@
+page-tic-tac-toe {
+	
+	.grid{
+		height: 100%;
+		width: 100%;
+	}
+
+	.row {
+		height: 33.33%;
+		padding: 0;
+	}
+
+	.col{
+		width: 100%;
+	}
+
+	.btn {
+  		display:block;
+  		width: 98%;
+  		height: 98%;
+	}
+
+	.reset {
+		margin-top: 5%;
+	}
+
+	.stetje {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}

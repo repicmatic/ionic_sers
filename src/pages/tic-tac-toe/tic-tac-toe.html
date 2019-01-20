@@ -1,0 +1,117 @@
+<!--
+  Generated template for the TicTacToePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Igra</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+	<ion-grid>
+		<!-- tic tac toe board -->
+		<!-- 1. row-->
+		<ion-row>
+			<ion-col>
+
+				<button class="btn" id="1" ion-button  color="dark" (click)="narediPotezo(0,0)" *ngIf="board.board[0] == ''"> </button>
+				<button class="btn" id="1" ion-button  color="dark" *ngIf="board.board[0] != ''">{{board.board[0]}}</button>
+
+			</ion-col>
+				
+			<ion-col>
+
+				<button class="btn" id="2" ion-button  color="dark" (click)="narediPotezo(1,0)" *ngIf="board.board[1] == ''"></button>
+				<button class="btn" id="2" ion-button  color="dark" *ngIf="board.board[1] != ''">{{board.board[1]}}</button>
+
+			</ion-col>
+
+			<ion-col>
+
+				<button class="btn" id="3" ion-button  color="dark" (click)="narediPotezo(2,0)" *ngIf="board.board[2] == ''"></button>
+				<button class="btn" id="3" ion-button  color="dark" *ngIf="board.board[2] != ''">{{board.board[2]}}</button>
+
+			</ion-col>
+		</ion-row>
+		<!-- 2. row-->
+		<ion-row>
+			<ion-col>
+
+				<button class="btn" id="4" ion-button  color="dark" (click)="narediPotezo(0,1)" *ngIf="board.board[3] == ''"></button>
+				<button class="btn" id="4" ion-button  color="dark" *ngIf="board.board[3] != ''">{{board.board[3]}}</button>
+
+			</ion-col>
+
+			<ion-col>
+				
+				<button class="btn" id="5" ion-button  color="dark" (click)="narediPotezo(1,1)" *ngIf="board.board[4] == ''"></button>
+				<button class="btn" id="5" ion-button  color="dark" *ngIf="board.board[4] != ''">{{board.board[4]}}</button>
+
+			</ion-col>
+
+			<ion-col>
+				
+				<button class="btn" id="6" ion-button  color="dark" (click)="narediPotezo(2,1)" *ngIf="board.board[5] == ''"></button>
+				<button class="btn" id="6" ion-button  color="dark" *ngIf="board.board[5] != ''">{{board.board[5]}}</button>
+
+			</ion-col>
+		</ion-row>
+		<!-- 3. row-->
+		<ion-row>
+			<ion-col>
+
+				<button class="btn" id="7" ion-button  color="dark" (click)="narediPotezo(0,2)" *ngIf="board.board[6] == ''"></button>
+				<button class="btn" id="7" ion-button  color="dark" *ngIf="board.board[6] != ''">{{board.board[6]}}</button>
+
+			</ion-col>
+
+			<ion-col>
+
+				<button class="btn" id="8" ion-button  color="dark" (click)="narediPotezo(1,2)" *ngIf="board.board[7] == ''"></button>
+				<button class="btn" id="8" ion-button  color="dark" *ngIf="board.board[7] != ''">{{board.board[7]}}</button>
+
+			</ion-col>
+
+			<ion-col>
+				
+				<button class="btn" id="9" ion-button  color="dark" (click)="narediPotezo(2,2)" *ngIf="board.board[8] == ''"></button>
+				<button class="btn" id="9" ion-button  color="dark" *ngIf="board.board[8] != ''">{{board.board[8]}}</button>
+
+			</ion-col>
+		</ion-row>
+
+
+  		<!-- druga vrstica -->
+		<ion-row class="reset" >
+
+  			<button ion-button block round color="danger" (click)="resetIgro()" icon-end>RESET
+            </button>
+
+  		</ion-row>
+
+  		<!-- tretja vrstica -->
+  		<ion-row class="stetje" text-center>
+
+  			<ion-col ion-text color="primary">Zmage:</ion-col>
+  			<ion-col>Neodločeno:</ion-col>
+  			<ion-col ion-text color="danger">Porazi:</ion-col>
+
+  		</ion-row>
+
+  		<!-- cetrta vrstica -->
+  		<ion-row class="stetje" text-center>
+  			<ion-col>{{zmaga}}</ion-col>
+  			<ion-col>{{neodloceno}}</ion-col>
+  			<ion-col>{{poraz}}</ion-col>
+  		</ion-row>
+  		
+
+  	</ion-grid>
+
+</ion-content>
